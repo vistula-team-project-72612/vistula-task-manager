@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Task Manager</h1>
+            <p>Organize your tasks and stay productive.</p>
+        </div>
+
+        <div class="student-info">
+            Student ID:
+            <span id="student-id">72612</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+            <h2 id="form-heading">Add New Task</h2>
+
+            <form id="task-form">
+
+                <div class="form-group">
+                    <label for="task-title">Task Title</label>
+                    <input
+                        type="text"
+                        id="task-title"
+                        placeholder="Enter task title..."
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea
+                        id="task-description"
+                        placeholder="Enter task description..."
+                        rows="3"
+                    ></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="task-submit">
+                        Add Task
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancel-edit"
+                        class="secondary-button"
+                        hidden
+                    >
+                        Cancel
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <div class="tasks-header">
+                <h2>My Tasks</h2>
+                <span id="task-count">0 tasks</span>
+            </div>
+
+            <div id="task-list">
+                <!-- Tasks will be loaded here -->
+            </div>
+        </section>
+
+        <p id="status-message" role="status" aria-live="polite">
+            Loading tasks...
+        </p>
+
+        <footer>
+            <a id="contribution-link" href="contribution.html">
+                View Team Contribution
+            </a>
+        </footer>
+
+    </main>
+
+</body>
+</html>
